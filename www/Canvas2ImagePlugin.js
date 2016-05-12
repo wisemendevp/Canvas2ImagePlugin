@@ -18,8 +18,9 @@
             console.log("Canvas2ImagePlugin Error: failureCallback is not a function");
         }
         else {
-            var canvas = (typeof canvasId === "string") ? document.getElementById(canvasId) : canvasId;
-            var imageData = canvas.toDataURL().replace(/data:image\/png;base64,/,'');
+           // var canvas = (typeof canvasId === "string") ? document.getElementById(canvasId) : canvasId;
+        //    var imageData = canvas.toDataURL().replace(/data:image\/png;base64,/,'');
+         var imageData = canvasId;
             return cordova.exec(successCallback, failureCallback, "Canvas2ImagePlugin","saveImageDataToLibrary",[imageData]);
         }
     }
